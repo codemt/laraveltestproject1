@@ -1,0 +1,26 @@
+// Read the file into an array
+$items = file2;
+
+if (count($items)) {
+    // Open the table
+    echo "<table>";
+
+    // Cycle through the array
+    foreach ($items as $item) {
+
+        // Parse the line, retriving the name and e-mail address
+        list($name, $email) = explode(" ", $item);
+
+        // Remove newline from $email
+        $email = trim($email);
+
+        // Output a row
+        echo "<tr>";
+        echo "<td>$name</td>";
+        echo "<td><a href=\"mailto:$email\">$email</a></td>";
+        echo "</tr>";
+    }
+
+    // Close the table
+    echo "</table>";
+}
