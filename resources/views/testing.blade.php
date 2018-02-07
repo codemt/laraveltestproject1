@@ -1,20 +1,17 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title> Form Submit </title>
-                <!-- Latest compiled and minified CSS -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+@extends('layouts.app')
+@section('title','formsubmit')
+@section('content')
 
-        <!-- jQuery library -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <div class="container">
 
-        <!-- Latest compiled JavaScript -->
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-</head>
-
-
-<body>
-
+            <nav aria-label="breadcrumb">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="{{ route('upload') }}">Home</a></li>
+                <li class="breadcrumb-item"><a href="#">Library</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Data</li>
+              </ol>
+            </nav>
+        
         <h1>  Form Submission </h1>
         
 
@@ -29,30 +26,20 @@
 
                   <div class="container">
                         
-                       <form action="multipleform" method="post">
+                       <form action="storeformvalues" method="post">
                               {{ csrf_field() }}
                              <div class="row">
                                <div class="col">
-                                 <input type="text" name="data[0][name]"class="form-control" placeholder="First name">
+                                 <input type="text" name="name"class="form-control" placeholder="First name">
                                </div>
                                <div class="col">
-                                 <input type="text" name="data[0][mobile]" class="form-control" placeholder="Mobile">
+                                 <input type="text" name="mobile" class="form-control" placeholder="Mobile">
                                </div>
                                <div class="col">
-                                 <input type="text" name="data[0][email]" class="form-control" placeholder="Email(Optional)">
+                                 <input type="text" name="email" class="form-control" placeholder="Email(Optional)">
                                </div>
                              </div>
-                             <div class="row">
-                               <div class="col">
-                                 <input type="text" name="data[1][name]"class="form-control" placeholder="First name">
-                               </div>
-                               <div class="col">
-                                 <input type="text" name="data[1][mobile]" class="form-control" placeholder="Mobile">
-                               </div>
-                               <div class="col">
-                                 <input type="text" name="data[1][email]" class="form-control" placeholder="Email(Optional)">
-                               </div>
-                             </div>
+                          
                                      
 
                            <br> <br>
@@ -80,6 +67,13 @@
                         }
                     });
                 </script>
+        </div>
+    </div>
+    <script src="{{ URL::asset('js/jquery.min.js') }}"></script>
+    <script src="{{ URL::asset('bootstrap/js/bootstrap.min.js') }}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.pack.js"></script>
+    <script src="{{ URL::asset('js/Basic-fancyBox-Gallery.js') }}"></script>
+@endsection
 
-</body>
-</html>
+<!-- </html> --> 

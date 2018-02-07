@@ -6,8 +6,13 @@
     "type": "project",
     "require": {
         "php": ">=5.6.4",
+        "andrey-helldar/sitemap": "^2.0",
+        "davejamesmiller/laravel-breadcrumbs": "2.*",
         "laravel/framework": "5.4.*",
-        "laravel/tinker": "~1.0"
+        "laravel/tinker": "~1.0",
+        "refinery29/sitemap": "^0.5.0",
+        "spatie/laravel-sitemap": "2.4.0",
+        "watson/sitemap": "^2.0"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",

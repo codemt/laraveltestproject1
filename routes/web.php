@@ -11,9 +11,10 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+Route::get('/','UserController@index');
 Route::get('/login','LoginController@login')->name('login');
 Auth::routes();
 
@@ -42,6 +43,11 @@ Route::middleware('auth')->group(function(){
 	Route::get('googlereviews','ReviewController@show');
 	Route::get('fetchmyreviews','ReviewController@getplaceid')->name('fetchmyreviews');
 	Route::post('/reviewstable','ReviewController@index');
-
+	Route::get('fetchmyreviews','ReviewController@getplaceid')->name('fetchmyreviews');
+	Route::get('transfergoods','TransferController@start')->name('transfergoods');
+	Route::get('testing','LoginController@testing')->name('testpage');
+	Route::get('sitemap', 'SiteMapController@index');
+	Route::get('crum', 'CrumController@index');
+	Route::get('generatesitemap','SiteMapController@generate');
 
 });

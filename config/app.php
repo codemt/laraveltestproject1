@@ -176,6 +176,11 @@ return [
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
+        Watson\Sitemap\SitemapServiceProvider::class,
+        Spatie\Sitemap\SitemapServiceProvider::class,
+        Helldar\Sitemap\SitemapServiceProvider::class,
+       
+
 
     ],
 
@@ -225,6 +230,11 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
+        'Sitemap' => Watson\Sitemap\Facades\Sitemap::class,
+
+
+
+
 
     ],
 

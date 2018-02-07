@@ -14,7 +14,7 @@
     </title>
 </head>
 <body>
-            <h1> Single Invite List   </h1>
+            <h1> Submit Multiple Form Values    </h1>
 
             <div class="table-responsive">
                <table id="data-table" class="table table-bordered">
@@ -33,9 +33,12 @@
                         </thead>
                         <tbody>
                                 
-                                @foreach($formdata as $key => $value) 
-                                <tr>
-                                       <td> {{ $value }} </td> 
+                                @foreach($formdata as $value) 
+                                <tr> 
+
+                                       <td> {{ $value['name'] }} </td>
+                                       <td> {{ $value['mobile'] }} </td> 
+                                       <td> {{ $value['email'] }} </td>  
                                 </tr>    
 
                                 @endforeach

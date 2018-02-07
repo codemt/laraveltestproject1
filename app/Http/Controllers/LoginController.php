@@ -16,4 +16,11 @@ class LoginController extends Controller
 
 
     }
+    public function testing()
+    {
+
+
+    		return view('testing');
+
+    }
 }

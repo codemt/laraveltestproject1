@@ -69,7 +69,7 @@ class CSVController extends Controller
 
                 			$csv = array();
 
-                //echo '<pre>';
+                echo '<pre>';
         
 
 			                foreach ($lines as $key => $value) 
@@ -79,7 +79,7 @@ class CSVController extends Controller
 			                    
 			                }
 
-                		//print_r($csv);
+                		print_r($csv);
                 		
                 
                 		return view('csvtable')->with(array('csvdata'=>$csv));

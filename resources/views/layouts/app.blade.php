@@ -15,6 +15,7 @@
      <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LoginTestingLaravel</title>
+    
     <link rel="stylesheet" href="{{ URL::asset('bootstrap/css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ URL::asset('css/Basic-fancyBox-Gallery.css') }}">
     <link rel="stylesheet" href="{{ URL::asset('css/Google-Style-Login.css') }}">
@@ -27,11 +28,6 @@
         <nav class="navbar navbar-default navbar-static-top">
             <div class="container">
                 <div class="navbar-header">
-
-
-
-
-
                     <!-- Collapsed Hamburger -->
                     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#app-navbar-collapse">
                         <span class="sr-only">Toggle Navigation</span>
@@ -88,6 +84,7 @@
                 </div>
             </div>
         </nav>
+        
 
         @yield('content')
     </div>
@@ -96,8 +93,6 @@
     <script src="{{ asset('js/app.js') }}"></script>
      <script src="{{ URL::asset('js/jquery.min.js') }}"></script>
     <script src="{{ URL::asset('bootstrap/js/bootstrap.min.js') }}"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.pack.js"></script>
     <script src="{{ URL::asset('js/Basic-fancyBox-Gallery.js') }}"></script>
 </body>
 </html>
